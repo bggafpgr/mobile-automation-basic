@@ -48,7 +48,7 @@ public class Hooks {
 
   private void startAppium(){
     try {
-      appiumProcess = processBuilder.command("bash", "-c", "appium").start();
+      appiumProcess = processBuilder.command("CMD", "/c", "appium").start();
       BufferedReader br = new BufferedReader(new InputStreamReader(appiumProcess.getInputStream()));
       String line = "";
       while((line = br.readLine()) != null) {
@@ -62,7 +62,7 @@ public class Hooks {
 
   private void killAppium(){
     try {
-      processBuilder.command("bash", "-c", "killall -9 node").start();
+      processBuilder.command("taskkill", "/f", "/im", "node.exe").start();
     } catch (IOException e) {
       e.printStackTrace();
     }

@@ -88,31 +88,32 @@ Feature: Basic Actions
       | Password             |
       | Legal business phone |
 
-  @WIP @HOMEWORK @IMPLEMENT_THIS
+  @HOMEWORK @IMPLEMENT_THIS
   Scenario: Check categories - Cameras & Photo
-    When I click "Stack button" 
+    When I click "Stack button"
     And  I click "Categories"
-    And  I click "Cameras & Photo"
+    And  I click "Cameras And Photo"
     Then I see the following fields:
       | Camcorders       |
       | Camera Drones    |
       | Digital Cameras  |
       | Film Photography |
 
-  @WIP @HOMEWORK @IMPLEMENT_THIS
+  @HOMEWORK @IMPLEMENT_THIS
   Scenario: Check available options for Nikon
     When I click "Stack button" 
     And  I click "Categories"
-    And  I click "Cameras & Photo"
+    And  I click "Cameras And Photo"
     And  I click "Digital Cameras"
     And  I click "Nikon"
+    And  I click "Series"
     And  I click "Nikon D"
     And  I click "Nikon D5600"
     Then I see the following fields:
-      | Limited Time Deals |
+      | Authorized Seller |
       | Hot This Week      |
 
-  @WIP @HOMEWORK @IMPLEMENT_THIS
+  @HOMEWORK @IMPLEMENT_THIS
   Scenario: Check languages
     When I click "Stack button"
     And  I scroll to "Settings"
@@ -122,6 +123,5 @@ Feature: Basic Actions
     When I click "United States"
     And  I search for "Sw"
     Then I see the following fields:
-      | Swaziland   |
       | Sweden      |
       | Switzerland |
